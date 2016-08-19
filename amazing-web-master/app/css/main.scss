@@ -1,0 +1,72 @@
+@import "node_modules/normalize.css/normalize";
+@import "node_modules/bourbon/app/assets/stylesheets/bourbon";
+@import "node_modules/bourbon-neat/app/assets/stylesheets/neat";
+@import "base/base";
+
+$default-bg: white;
+$default-text: black;
+
+body {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    background: $default-bg;
+    color: $default-text;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.5em 0 1em;
+
+    & > small {
+        color: gray;
+        font-size: 70%;
+    }
+}
+
+section {
+  @include outer-container;
+  aside { @include span-columns(3); }
+  article { @include span-columns(9); }
+
+  .controls {
+    @include outer-container;
+    .control {
+      @include span-columns(3);
+    }
+  }
+}
+
+// Reach-Select autocomplete styling fix
+.Select {
+  font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+
+  span.submenu {
+    padding-left: 15px;
+  }
+
+  .Select-input {
+    input {
+      border: none;
+      margin: 0;
+      padding: 0;
+      &:focus { box-shadow: none; }
+    }
+  }
+}
+
+
+// List styling
+
+.nr-app-info { width: 500px; }
+
+.nr-data-row {
+  .app-icon {
+    float: left;
+    width: 50px;
+    margin-right: 15px;
+  }
+
+  small {
+    a { color: #acb4c2; }
+  }
+}

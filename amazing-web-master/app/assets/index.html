@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <title>Apptopia New Releases</title>
+      <link rel="stylesheet" href="css/vendor.css">
+      <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body>
+      <section>
+        <h1>Apptopia New Releases</h1>
+        <div id="nr-container">
+          Loading ...
+        </div>
+      </section>
+
+      <script src="js/vendor.js"></script>
+      <script src="js/app.js"></script>
+
+      <script>
+        // WARNING: The token below is the temporary one with 90 days TTL.
+        //          It should NOT be used on production. Backend should
+        //          follow login procedure and render obtained access
+        //          tokens here.
+        token = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJDbGllbnQ6MSIsImV4cCI6MTQ2MTY5NTA3MCwiaWF0IjoxNDUzOTE5MDcwLCJpc3MiOiJpbnRlZ3JhdGlvbnMuYXBwdG9waWEuY29tIiwianRpIjoiMzhjYzEzZjQtYzZjNS00ZDhjLWFkZmYtNmM1ZTI0NTRlNzM1IiwicGVtIjp7ImludGVncmF0aW9ucyI6MSwibW5fZW5kcG9pbnRzIjozfSwic3ViIjoiQ2xpZW50OjEiLCJ0eXAiOiJ0b2tlbiJ9.0c8WOo3yrT89uOjrwKj5bqCyXi1gNprzdAYeiCZXSqt0oO0ylz6-2sU2mmx_58E-2xAymREe98hje9WdhWKmjg"
+        nr = require('js/components/new_releases')
+        nr.init(token, '#nr-container')
+      </script>
+    </body>
+</html>

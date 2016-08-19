@@ -1,0 +1,32 @@
+{
+  "name": "amazing-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "auto-reload-brunch": "^1.8.1",
+    "babel-brunch": "^6.0.0",
+    "bourbon": "^4.2.6",
+    "bourbon-neat": "^1.7.2",
+    "brunch": "^2.2.1",
+    "clean-css-brunch": ">= 1.0 < 1.8",
+    "css-brunch": ">= 1.0 < 1.8",
+    "immstruct": "^2.0.0",
+    "immutable": "^3.7.6",
+    "javascript-brunch": ">= 1.0 < 1.8",
+    "lodash": "^4.0.1",
+    "moment": "^2.11.1",
+    "normalize.css": "^3.0.3",
+    "omniscient": "^4.1.1",
+    "react": "^0.14.6",
+    "react-datepicker": "^0.18.0",
+    "react-dom": "^0.14.6",
+    "react-select": "^0.9.1",
+    "react-sparklines": "^1.4.2",
+    "sass-brunch": "^1.9.2",
+    "uglify-js-brunch": ">= 1.0 < 1.8",
+    "whatwg-fetch": "^0.11.0"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.3.13"
+  }
+}

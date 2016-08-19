@@ -7,13 +7,15 @@
         $err;
 
         if (!empty($token) && !empty($expires) && $expires - time() > 0) {
-            syslog(LOG_DEBUG, "Using cached token: $token");
-            syslog(LOG_DEBUG, "Expires: ".secondsToTime($expires - time()));
+            wplog("Using cached token: $token");
+            wplog("Expires: ".secondsToTime($expires - time()));
         } else {
             if (!empty($token) && !empty($expires) && $expires - time() <= 0) {
-                syslog(LOG_INFO, "Apptopia token expired; retrieving new token");
+                wplog("Apptopia token expired; retrieving new token");
+                delete_option('apptopia_token');
+                delete_option('apptopia_expires');
             } else {
-                syslog(LOG_INFO, "No cached Apptopia token was found; retrieving new token");
+                wplog("No cached Apptopia token was found; retrieving new token");
             }
             $response = getNewToken($args);
             $err = "Error: Apptopia authentication failed: ".$response['headers']['http_code'];
@@ -27,9 +29,9 @@
                     update_option('apptopia_token', $token);
                     update_option('apptopia_expires', $expires);
                 }
-                syslog(LOG_INFO, "Got new token: $token");
-                syslog(LOG_INFO, "Saved it: ".(get_option('apptopia_token')));
-                syslog(LOG_INFO, "Expires: ".secondsToTime($expires - time()));
+                wplog("Got new token: $token");
+                wplog("Saved it: ".(get_option('apptopia_token')));
+                wplog("Expires: ".secondsToTime($expires - time()));
             }
         }
 

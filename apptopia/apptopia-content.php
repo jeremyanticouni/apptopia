@@ -34,16 +34,18 @@ function apptopia_shortcode($apptopia_atts) {
 		$info = '<p class="apptopia-info">'.$token.'</p>';
 	}
 
+	$title = 'Auto AppSniper Tool - New Releases';
+
 	$content = '
 		<!doctype html>
 		<html>
 		    <head>
 		      <meta charset="utf-8">
-		      <title>Apptopia - New Releases</title>
+		      <title>'.$title.'</title>
 		    </head>
 		    <body>
 		      <section>
-		        <h1>Apptopia - New Releases</h1>
+		        <h1>'.$title.'</h1>
 		        <div id="nr-container">
 		          Loading ...
 		        </div>

@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: Apptopia
+ * Plugin Name: Auto AppSniper Tool - New Releases
  * Description: This plugin integrates with the Apptopia API and displays a searchable database on the page. Use the shortcode [apptopia client_id="" client_secret=""]
  * Version: 1.0
  * Author: Brandon Shelley / Jeremy Anticouni
